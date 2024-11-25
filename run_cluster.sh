@@ -35,4 +35,3 @@ fi
 # Run the Ray start command
 echo "Starting Ray with command: ${RAY_START_CMD}"
 eval "${RAY_START_CMD} ${ADDITIONAL_ARGS[@]} &"
-ray status
