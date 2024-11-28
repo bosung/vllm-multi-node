@@ -29,7 +29,8 @@ RAY_START_CMD="ray start --block"
 if [ "${NODE_TYPE}" == "--head" ]; then
     RAY_START_CMD+=" --head --port=6379"
 else
-    RAY_START_CMD+=" --address=${HEAD_NODE_ADDRESS}:6379"
+    FQDN="${HEAD_NODE_ADDRESS}.svc.cluster.local"
+    RAY_START_CMD+=" --address=${FQDN}:6379"
 fi
 
 # Run the Ray start command
